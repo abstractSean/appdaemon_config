@@ -1,0 +1,15 @@
+
+appdaemon:
+  threads: 10
+  plugins:
+    HASS:
+      type: hass
+      ha_url: http://192.168.1.145:8123 
+      token: !secret hass_token
+      
+log:
+  logfile: /home/homeassistant/conf/logs/appdaemon.log
+
+hadashboard:
+  dash_url: http://192.168.1.145:5050
+
