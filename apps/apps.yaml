@@ -2,3 +2,12 @@
 hello_world:
   module: hello
   class: HelloWorld
+
+goal_light:
+  module: goal_light
+  class: GoalLight
+  goal_lights:
+    - light.computer 
+    - light.tv
+
+  
