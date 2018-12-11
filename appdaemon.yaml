@@ -9,6 +9,7 @@ appdaemon:
       
 log:
   logfile: /home/homeassistant/conf/logs/appdaemon.log
+  errorfile: /home/homeassistant/conf/logs/errors.log
 
 hadashboard:
   dash_url: http://192.168.1.145:5050
