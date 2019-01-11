@@ -6,8 +6,48 @@ hello_world:
 goal_light:
   module: goal_light
   class: GoalLight
+  trigger: light.goal_light
+  duration: 30
   goal_lights:
     - light.computer 
     - light.tv
+      
+goal_light_test:
+  module: goal_light
+  class: GoalLight
+  trigger: input_boolean.test_goal_light
+  duration: 5
+  goal_lights:
+    - light.test_light
 
-  
+
+christmas_red: 
+  module: color_flash
+  class: ColorFlash
+  trigger: light.christmas
+  duration: 30
+  lights:
+    - light.tv
+  colors:
+    - [255, 0, 0]
+    - [0, 255, 0]
+  on_delay: 0.5
+  transition: 2
+  off_delay: 0.5 
+  blink: True
+
+christmas_green: 
+  module: color_flash
+  class: ColorFlash
+  trigger: light.christmas
+  duration: 30
+  lights:
+    - light.computer
+  colors:
+    - [0, 255, 0]
+    - [255, 0, 0]
+  offset: 0.5
+  on_delay: 0.5
+  transition: 2
+  off_delay: 0.5 
+  blink: True
