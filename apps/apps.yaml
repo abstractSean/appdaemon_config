@@ -3,6 +3,10 @@ hello_world:
   module: hello
   class: HelloWorld
 
+LightControl:
+  module: light_control
+  class: LightControl
+
 goal_light:
   module: goal_light
   class: GoalLight
@@ -72,4 +76,19 @@ rainbow:
   offset: 0.0
   on_delay: 0.5
   transition: 2
+  off_delay: 0.5
+
+crazy:
+  module: random_colors
+  class: RandomColors
+  dependencies:
+    - LightControl
+  trigger: light.crazy
+  duration: 30
+  lights:
+    - light.tv
+    - light.computer
+  offset: 0.0
+  on_delay: 0.0
+  transition: 0.0
   off_delay: 0.5
