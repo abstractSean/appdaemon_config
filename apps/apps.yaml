@@ -92,3 +92,20 @@ crazy:
   on_delay: 0.0
   transition: 0.0
   off_delay: 0.5
+
+
+oilers:
+  module: color_flash
+  class: ColorFlash
+  trigger: light.go_oilers
+  duration: 30
+  lights:
+    - light.tv
+    - light.computer
+  colors:
+    - [255, 165, 0]
+    - [0, 0, 255]
+  on_delay: 0.5
+  transition: 2
+  off_delay: 0.5
+  blink: True
