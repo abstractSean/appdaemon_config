@@ -17,6 +17,7 @@ class RandomColors(hass.Hass, appapi.AppDaemon):
             self.offset = self.args['offset']
         else:
             self.offset = 0
+       
         
 
         for light in lights:
@@ -32,7 +33,8 @@ class RandomColors(hass.Hass, appapi.AppDaemon):
         self.brightness = self.get_state(self.trigger,
                                          attribute='brightness')
 
-        if self.brightness < 255:
+
+        if self.brightness and self.brightness < 255:
             self.bpm = self.brightness * (100/255)
             self.control.off_delay = 60 / self.bpm
 
